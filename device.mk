@@ -25,6 +25,15 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 endif
 
+ifeq ($(TARGET_PRODUCT),carbon_berkeley)
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-carbon
+
+# KeyHandler
+PRODUCT_PACKAGES += \
+    org.carbonrom.keyhandler
+endif
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
