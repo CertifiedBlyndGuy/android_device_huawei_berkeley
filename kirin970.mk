@@ -19,7 +19,11 @@ $(call inherit-product, vendor/huawei/kirin970-common/kirin970-common-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-carbon
+
+# KeyHandler
+PRODUCT_PACKAGES += \
+    org.carbonrom.keyhandler
 
 # Properties
 -include $(LOCAL_PATH)/system_prop.mk
@@ -43,10 +47,6 @@ PRODUCT_PACKAGES += \
 # Display
 PRODUCT_PACKAGES += \
     libion
-
-# Input
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/fingerprint.kl:system/usr/keylayout/fingerprint.kl
 
 # LineageHw
 PRODUCT_PACKAGES += \

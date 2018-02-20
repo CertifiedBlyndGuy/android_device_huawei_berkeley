@@ -19,6 +19,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.media_vol_steps=25 \
     ro.config.vc_call_vol_steps=7
 
+# Disable FP nav by default
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.fpnav.enabled=0
+
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.sys.fw.bg_apps_limit=60
