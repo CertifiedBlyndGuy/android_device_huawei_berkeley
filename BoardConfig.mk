@@ -31,18 +31,15 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 
+PRODUCT_FULL_TREBLE := true
+BOARD_VNDK_VERSION := current
+
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 BOARD_HAVE_BLUETOOTH := true
 
 # Extended Filesystem Support
 TARGET_EXFAT_DRIVER := exfat
-
-# Lineage hardware
-ifneq ($(TARGET_PRODUCT),aosp_berkeley)
-BOARD_HARDWARE_CLASS += \
-    $(DEVICE_PATH)/lineagehw
-endif
 
 # Partitions
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3707764736

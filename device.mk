@@ -19,27 +19,15 @@ $(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
-
-ifeq ($(TARGET_PRODUCT),lineage_berkeley)
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
-endif
-
-ifeq ($(TARGET_PRODUCT),carbon_berkeley)
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-carbon
-endif
+    device/huawei/berkeley/overlay
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
 
 # APN
-ifeq ($(TARGET_PRODUCT),aosp_berkeley)
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/apns-full-conf.xml:system/etc/apns-conf.xml
-endif
+    device/huawei/berkeley/apns-full-conf.xml:system/etc/apns-conf.xml
 
 # Device init scripts
 PRODUCT_PACKAGES += \
@@ -52,17 +40,11 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/compatibility_matrix.xml:system/compatibility_matrix.xml
+    device/huawei/berkeley/compatibility_matrix.xml:system/compatibility_matrix.xml
 
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0
-
-# KeyHandler
-ifneq ($(TARGET_PRODUCT),aosp_berkeley)
-PRODUCT_PACKAGES += \
-    org.lineageos.keyhandler
-endif
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -90,9 +72,9 @@ PRODUCT_PACKAGES += \
 
 # VNDK
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/vndk-compat/vndk-detect:system/bin/vndk-detect \
-    $(LOCAL_PATH)/vndk-compat/ld.config.compat.txt:system/etc/ld.config.compat.txt \
-    $(LOCAL_PATH)/vndk-compat/vndk-compat.rc:system/etc/init/vndk-compat.rc
+    device/huawei/berkeley/vndk-compat/vndk-detect:system/bin/vndk-detect \
+    device/huawei/berkeley/vndk-compat/ld.config.compat.txt:system/etc/ld.config.compat.txt \
+    device/huawei/berkeley/vndk-compat/vndk-compat.rc:system/etc/init/vndk-compat.rc
 
 PRODUCT_PACKAGES += \
     vndk-sp
