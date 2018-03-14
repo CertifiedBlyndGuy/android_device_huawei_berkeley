@@ -50,6 +50,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     org.lineageos.keyhandler
 
+# IR
+PRODUCT_PACKAGES += \
+    irself
+
+PRODUCT_BOOT_JARS += \
+    irself
+
 # NFC
 PRODUCT_PACKAGES += \
     NfcNci \
