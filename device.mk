@@ -15,6 +15,7 @@
 #
 
 $(call inherit-product-if-exists, vendor/huawei/berkeley/berkeley-vendor.mk)
+$(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
