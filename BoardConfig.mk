@@ -39,8 +39,10 @@ BOARD_HAVE_BLUETOOTH := true
 TARGET_EXFAT_DRIVER := exfat
 
 # Lineage hardware
+ifneq ($(TARGET_PRODUCT),aosp_berkeley)
 BOARD_HARDWARE_CLASS += \
     $(DEVICE_PATH)/lineagehw
+endif
 
 # Partitions
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3707764736

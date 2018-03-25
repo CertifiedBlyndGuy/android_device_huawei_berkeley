@@ -59,8 +59,10 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0
 
 # KeyHandler
+ifneq ($(TARGET_PRODUCT),aosp_berkeley)
 PRODUCT_PACKAGES += \
     org.lineageos.keyhandler
+endif
 
 # NFC
 PRODUCT_PACKAGES += \
