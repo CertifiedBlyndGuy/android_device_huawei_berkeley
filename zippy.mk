@@ -17,9 +17,9 @@
 $(call inherit-product, device/huawei/berkeley/full_berkeley.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/zippy/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_berkeley
+PRODUCT_NAME := zippy_berkeley
 PRODUCT_DEVICE := berkeley
 PRODUCT_BRAND := Huawei
 PRODUCT_MODEL := Honor View 10
