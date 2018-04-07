@@ -25,6 +25,10 @@ DEVICE_PACKAGE_OVERLAYS += \
 TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
 
+# APNs
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/apns-full-conf.xml:system/etc/apns-conf.xml
+
 # Device init scripts
 PRODUCT_PACKAGES += \
     init.kirin970.rc \
