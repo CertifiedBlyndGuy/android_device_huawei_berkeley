@@ -16,9 +16,6 @@ on property:sys.fpnav.enabled=1
     stop fps_hal_ext
     start fps_hal_ext
 
-on property:ro.lineage.device=*
-    setprop qemu.hw.mainkeys 1
-
 service dpeservice-1.0 /system/bin/displayengineserver@1.0
     class main
     user graphics
