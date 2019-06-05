@@ -48,10 +48,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libion
 
-# LineageHw
-PRODUCT_PACKAGES += \
-    lineage.touch@1.0-service.kirin970
-
 # NFC
 PRODUCT_PACKAGES += \
     NfcNci \
@@ -76,7 +72,3 @@ PRODUCT_BOOT_JARS += \
 # Recovery
 PRODUCT_PACKAGES += \
     resize2fs_static
-
-# Trust HAL
-PRODUCT_PACKAGES += \
-    lineage.trust@1.0-service
